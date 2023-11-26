@@ -1,0 +1,26 @@
+﻿@model Crud_opreation.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<ul>
+    <li>
+        <label >ProductId   : </label> @Html.DisplayFor(x => x.ProductId)
+    </li>
+    <li>
+        <label>ProductName :  </label>@Html.DisplayFor(x => x.ProductName)
+    </li>
+    <li>
+        <label>CategoryId :  </label>@Html.DisplayFor(x => x.Category.CategoryId)
+    </li>
+    <li>
+        <label>CategoryName :  </label>@Html.DisplayFor(x => x.Category.CategoryName)
+    </li>
+</ul>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
